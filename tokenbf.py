@@ -40,7 +40,7 @@ class Bruteforce:
             id_encode = base64.b64encode(user_id.encode("UTF-8")).decode("UTF-8")
             self.perform_bruteforce(id_encode)
         else:
-            print(f"{Fore.CYAN}[$]{Style.RESET_ALL}    ID inválida, inténtelo de nuevo")
+            print(f"{Fore.CYAN}[$]{Style.RESET_ALL}    İD yanlış veya bozuk")
 
     def bruteforce_random(self):
         user_id = ''.join(random.choices('0123456789', k=18))
@@ -53,33 +53,20 @@ class App:
         self.bruteforce = Bruteforce()
 
     def banner(self):
-        print(f"{Fore.CYAN}")
-        print("""                                _          _     _ 
-  ___  __| |_      _(_)___| |
- / _ \/ _` \ \ /\ / / |_  / |
-|  __/ (_| |\ V  V /| |/ /| |
- \___|\__,_| \_/\_/ |_/___|_|
-        print("                                                                  ")
-        print("   ████████╗ ██████╗ ██╗  ██╗███████╗███╗   ██╗██████╗ ███████╗   ")
-        print("   ╚══██╔══╝██╔═══██╗██║ ██╔╝██╔════╝████╗  ██║██╔══██╗██╔════╝   ")
-        print("      ██║   ██║   ██║█████╔╝ █████╗  ██╔██╗ ██║██████╔╝█████╗     ")
-        print("      ██║   ██║   ██║██╔═██╗ ██╔══╝  ██║╚██╗██║██╔══██╗██╔══╝     ")
-        print("      ██║   ╚██████╔╝██║  ██╗███████╗██║ ╚████║██████╔╝██║        ")
-        print("      ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝╚═════╝ ╚═╝        ")
-        print("")
+
 
     def menu(self):
         os.system("@title   [$]  Token Bruteforce Script  && cls")
         self.banner()
         print(f"{Fore.BLUE}[$]{Style.RESET_ALL}    Dev: O{Fore.BLUE}${Fore.WHITE}int <3")
         print("")
-        print(f"{Fore.BLUE}[$]{Style.RESET_ALL}    Escoja una opción a realizar: ")
+        print(f"{Fore.BLUE}[$]{Style.RESET_ALL}    Bir Seçenek Seçin: ")
         print("")
-        print(f"{Fore.BLUE}[1]{Style.RESET_ALL}    Token Bruteforce por ID")
-        print(f"{Fore.BLUE}[2]{Style.RESET_ALL}    Token Bruteforce random")
-        print(f"{Fore.BLUE}[3]{Style.RESET_ALL}    Leave")
+        print(f"{Fore.BLUE}[1]{Style.RESET_ALL}    Token Bruteforce yapacağınız kişinin idsi")
+        print(f"{Fore.BLUE}[2]{Style.RESET_ALL}    random token")
+        print(f"{Fore.BLUE}[3]{Style.RESET_ALL}    Çıkış")
         print("")
-        opcion = input(f"{Fore.BLUE}[$]{Style.RESET_ALL}    Opción a escoger: ")
+        opcion = input(f"{Fore.BLUE}[$]{Style.RESET_ALL}   Hangi Seçenek?: ")
 
         if opcion == "1":
             self.id_bruteforce()
@@ -106,7 +93,7 @@ class App:
         exit()
 
     def invalid_option(self):
-        os.system("@title   [$]  Acceso denegado  && cls")
+        os.system("@title   [$]  Doğru Şifre  && cls")
         self.banner()
         print(f"{Fore.CYAN}[$]{Style.RESET_ALL}    yanlış şifre")
         input()
@@ -130,13 +117,13 @@ class App:
         if contraseña == "123":
             os.system("@title   [$]  Acceso concedido  && cls")
             self.banner()
-            print(f"{Fore.BLUE}[$]{Style.RESET_ALL}    Acceso concedido.")
+            print(f"{Fore.BLUE}[$]{Style.RESET_ALL}    Erişime İzin Verildi")
             time.sleep(3)
             self.menu()
         else:
             os.system("@title   [$]  Acceso denegado  && cls")
             self.banner()
-            print(f"{Fore.CYAN}[$]{Style.RESET_ALL}    Acceso denegado")
+            print(f"{Fore.CYAN}[$]{Style.RESET_ALL}    Erişim Engellendi")
             input()
             self.menu()
 
